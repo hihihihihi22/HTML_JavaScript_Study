@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step04_Document03.html</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            border: 1px solid red;
+            background-color:yellow;
+            cursor:crosshair; /*pointer*/
+            color: blueviolet;
+            transition: all 5s linear; /*transition을 적용할 수 있는 모든 속성에 적용하기*/
+        }
+    </style>
+</head>
+<body>
+    <div class="box">click me!</div>
+    <script>
+        //박스 div를 클릭했을때 width, height를 각각 200px로 변경해 보세요
+        document.querySelector(".box").addEventListener("click",function(){
+            document.querySelector(".box").style.width="1000px";
+            document.querySelector(".box").style.height="1000px";
+            document.querySelector(".box").style.marginLeft="100px";
+            document.querySelector(".box").style.fontSize="3em";
+        })
+    </script>
+</body>
+</html>

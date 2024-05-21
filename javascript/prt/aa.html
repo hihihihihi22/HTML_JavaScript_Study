@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>색상바꾸기</title>
+    <style>
+        .box{
+            width:100px;
+            height: 100px;
+            border: 1px solid orange;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <button id ="changeBtn">바꾸기</button>
+    <button id="changeBtn2">바꾸기2</button>
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    
+    <script>
+        document.querySelector("#changeBtn").addEventListener("click",function(){
+            document.querySelectorAll(".box")[0].style.backgroundColor = "red"
+            document.querySelectorAll(".box")[1].style.backgroundColor = "green"
+            document.querySelectorAll(".box")[2].style.backgroundColor = "blue"
+        })
+
+        document.querySelector("#changeBtn2").addEventListener("click",function(){
+            document.querySelectorAll(".box").forEach((item)=>{
+                item.style.backgroundColor="black";
+            })
+        })
+    </script>
+</body>
+</html>

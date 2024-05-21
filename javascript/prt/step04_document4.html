@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            border: 1px solid red;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <button id="changeBtn">바꾸기</button>
+    <button id="changeBtn2">바꾸기2</button>
+    <div class="box">div</div>
+    <div class="box">div</div>
+    <div class="box">div</div>
+
+
+    <script>
+        // 버튼을 눌렀을 때 모든 div의 배경색을 노란색으로 변경해보세요
+        document.querySelector("#changeBtn").addEventListener("click", function(){
+            document.querySelectorAll(".box")[0].style.backgroundColor= "yellow"
+            document.querySelectorAll(".box")[1].style.backgroundColor= "yellow"
+            document.querySelectorAll(".box")[2].style.backgroundColor= "yellow"
+
+        })
+
+        // forEach로 적용해보기
+        document.querySelector("#changeBtn2").addEventListener("click", function(){
+            document.querySelectorAll(".box").forEach((item)=>{
+                item.style.backgroundColor="red";})
+        })
+
+    </script>
+</body>
+</html>

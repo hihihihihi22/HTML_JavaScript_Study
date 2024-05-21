@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #styletext{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <p id="styletext">여기에 나타납니다</p>
+    <input type="text" id="inputText">
+    <button onclick="send()">전송</button>
+    <script>
+        function send(){
+            let msg = document.querySelector("#inputText").value;
+            document.querySelector("#styletext").innerText = msg;
+        }
+        
+    </script>
+</body>
+</html>
